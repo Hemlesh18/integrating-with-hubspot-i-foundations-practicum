@@ -1,0 +1,22 @@
+doctype html
+html 
+    head
+        title #{title}
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 #{title}
+        h2 Weird simbas
+        a( href="/update-cobj") add a simba
+        table 
+            tr
+                th Name
+                th Type
+                th Movie
+                th Is a dog or not
+            each simba in data 
+                tr
+                    td= simba.properties.simba
+                    td= simba.properties.simba_is_a_dog
+                    td= simba.properties.simba_movie
+                    td= simba.properties.simba_type
